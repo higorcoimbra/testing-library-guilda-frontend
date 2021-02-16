@@ -3,7 +3,18 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
-    "types": []
+    "types": [
+      "jest"
+    ],
+    "sourceMap": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "target": "es2015",
+    "lib": ["es2018", "es2015"]
   },
   "files": [
     "src/polyfills.ts"
