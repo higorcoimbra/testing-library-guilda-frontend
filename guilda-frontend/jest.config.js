@@ -15,7 +15,7 @@ module.exports = {
     modulePaths: ['<rootDir>/dist'],
     setupFilesAfterEnv: [
         "./node_modules/@angular-builders/jest/dist/jest-config/setup.js",
-        "./setupJest.js"
+        "./setupJest.ts"
     ]
 };
   
