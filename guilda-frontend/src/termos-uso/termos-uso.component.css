@@ -17,9 +17,13 @@
 }
 
 .acoes__aceitar {
-    background-color: green;
+    background-color: white;
+    color: green;
+    font-family: 'Roboto';
 }
 
 .acoes__rejeitar {
-    background-color: red;
+    background-color: white;
+    color: red;
+    font-family: 'Roboto';
 }
