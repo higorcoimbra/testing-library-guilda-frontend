@@ -13,7 +13,7 @@
         <button (click)="voltar()" type="button">Voltar</button>        
     </ng-template>
     <div *ngIf="!disparouAcao" class="termo-uso__acoes">
-        <button class="acoes__aceitar" (click)="responderTermo(true)" type="button">Aceitar</button>
-        <button class="acoes__rejeitar" (click)="responderTermo(false)" type="button">Rejeitar</button>
+        <button class="acoes__aceitar" mat-stroked-button (click)="responderTermo(true)" type="button">Aceitar</button>
+        <button class="acoes__rejeitar" mat-stroked-button (click)="responderTermo(false)" type="button">Rejeitar</button>
     </div>
 </div>
