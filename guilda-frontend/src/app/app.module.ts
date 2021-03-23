@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { TermosUsoModule } from '../termos-uso/termos-uso.module';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +16,8 @@ import { TermosUsoModule } from '../termos-uso/termos-uso.module';
     BrowserModule,
     TermosUsoModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
