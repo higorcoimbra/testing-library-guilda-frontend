@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TermosUsoService } from '../services/termos-uso.service';
 
 @Component({
   selector: 'app-termos-uso',
@@ -9,11 +10,15 @@ export class TermosUsoComponent implements OnInit {
 
   disparouAcao = false;
   respostaAcao: string = '';
+  termosUso: string = '';
 
-  constructor() { }
+  constructor(private termosUsoService: TermosUsoService) { }
 
   
   ngOnInit(): void {
+    this.termosUsoService.obterTermosUso().subscribe(termosUso => {
+      this.termosUso = termosUso;
+    })
   }
   
   responderTermo(resposta: boolean) {
