@@ -28,7 +28,7 @@ describe('TermosUsoComponent', () => {
     userEvent.click(botaoAceitar);
     // usei o queryBy porque quero testar se um elemento não está presente na tela
     let paragrafosTermo = screen.queryByTestId('paragrafosTermo');
-    expect(paragrafosTermo).not.toBeInTheDocument();
+    expect(paragrafosTermo).toBeFalsy();
     // novamente usando o truque de já testar fazendo a query
     // usando uma função como TextMatcher por conta da tag <strong>
     screen.getByText((conteudoHtml, noh) => noh.textContent == 'Os termos foram aceitos');
@@ -40,7 +40,7 @@ describe('TermosUsoComponent', () => {
     const botaoRejeitar = screen.getByRole('button', { name: 'Rejeitar' });
     userEvent.click(botaoRejeitar);
     paragrafosTermo = screen.queryByTestId('paragrafosTermo');
-    expect(paragrafosTermo).not.toBeInTheDocument();
+    expect(paragrafosTermo).toBeFalsy();
     screen.getByText((conteudo, no) => no.textContent == 'Os termos foram rejeitados');
   });
 });
