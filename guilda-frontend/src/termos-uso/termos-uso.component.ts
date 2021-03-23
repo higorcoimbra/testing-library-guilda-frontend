@@ -20,6 +20,19 @@ export class TermosUsoComponent implements OnInit {
       this.termosUso = termosUso;
     })
   }
+
+  baixarComoArquivo() {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(this.termosUso));
+    element.setAttribute('download', 'termos-uso.txt');
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  
+    document.body.removeChild(element);
+  }
   
   responderTermo(resposta: boolean) {
     this.disparouAcao = true;
