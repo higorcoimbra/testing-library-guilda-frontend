@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TermosUsoComponent } from './termos-uso.component';
-import { BrowserModule } from '@angular/platform-browser';
-
-
+import  { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [TermosUsoComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule
   ],
   exports:  [ TermosUsoComponent ]
 })
